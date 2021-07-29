@@ -11,17 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.openqa.selenium.WebElement;
 
 import com.pearson.utils.Selenium;
 
-import net.sourceforge.tess4j.Tesseract;
-import net.sourceforge.tess4j.TesseractException;
+
 
 public class StudentViewTesting {
 
@@ -52,9 +48,9 @@ public class StudentViewTesting {
 	public List<String> altTextLength_list=new ArrayList<>();
 
 	public List<String> mathOperator_list=new ArrayList<>();
-	
+
 	public List<String> audioAndVideo_list=new ArrayList<>();
-	
+
 	public List<String> validation_fontSize_list=new ArrayList<>();
 
 	public List<String> longdesc_list=new ArrayList<>();
@@ -78,10 +74,12 @@ public class StudentViewTesting {
 		Selenium.switchToWindowByNumber(1);
 
 		Selenium.switchOutFromFrame();
+		try {
 
-
-		Selenium.click(By.xpath("//button[@aria-label='Cancel']"));
-
+			Selenium.click(By.xpath("//button[@aria-label='Cancel']"));
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 
 
 		while(true)
@@ -139,7 +137,7 @@ public class StudentViewTesting {
 			audioAndVideoTagPresence(pageHeading, page);
 
 			Selenium.switchOutFromFrame();
-		//	presenceOfLangAttributeOnPage(pageHeading,page);
+			//	presenceOfLangAttributeOnPage(pageHeading,page);
 
 			pagenumber_list.add(pageHeading+"@#"+page);
 
@@ -153,7 +151,7 @@ public class StudentViewTesting {
 				Thread.sleep(2000);
 				counterNav++;
 			}
-			if(counterNav==20)
+			if(counterNav==35)
 			{
 				break;
 			}
@@ -166,9 +164,6 @@ public class StudentViewTesting {
 
 	private void audioAndVideoTagPresence(String pageHeading, String page) 
 	{
-
-
-
 		System.out.println("Testing checkpoint : audioAndVideoTagPresence");
 		try
 		{
@@ -178,16 +173,12 @@ public class StudentViewTesting {
 
 			for(WebElement e : elements)
 			{
-				
+
 				audioAndVideo_list.add(pageHeading+"@#"+page+"@#"+e.getAttribute("outerHTML"));
 			}
-
 		}
 		catch(Exception e)
 		{}
-
-	
-		
 	}
 
 
@@ -199,14 +190,15 @@ public class StudentViewTesting {
 		{
 
 			String xpathLongdesc = "(//img[not(@role='presentation') and not(@class='longdesc-icon')])";
-			List<WebElement> elements = Selenium.getWebElements(By.xpath(xpathLongdesc));
 
+			List<WebElement> elements = Selenium.getWebElements(By.xpath(xpathLongdesc));
 
 			for(int i=1;i<=elements.size();i++)
 			{
 
-				try {
-					
+				try 
+				{
+
 					if(Selenium.getWebElements(By.xpath(xpathLongdesc+"["+i+"]/ancestor::figure//following-sibling::a//img[@class='longdesc-icon']")).size()>0)
 					{
 						WebElement longdescEle=Selenium.getWebElement(By.xpath(xpathLongdesc+"["+i+"]/ancestor::figure//following-sibling::a//img[@class='longdesc-icon']"));
@@ -214,11 +206,12 @@ public class StudentViewTesting {
 						Selenium.click(longdescEle);
 						Thread.sleep(1500);
 						String longdescText="";
-						try {
+						try 
+						{
 							longdescText = Selenium.getWebElement(By.xpath("//body")).getText();
 						} catch (Exception e) {
 							Thread.sleep(1500);
-							
+
 							longdescText = Selenium.getWebElement(By.xpath("//body")).getText();
 						}
 
@@ -229,9 +222,7 @@ public class StudentViewTesting {
 						Selenium.getWebDriver().switchTo().defaultContent();
 						Thread.sleep(1000);
 						Selenium.click(By.xpath("//button[@id='back-button']"));
-
 						Thread.sleep(2000);
-
 						Selenium.getWebDriver().switchTo().frame("clo-iframe");
 
 					}
@@ -252,15 +243,11 @@ public class StudentViewTesting {
 		{}
 	}
 
-
-
-
-
 	private void mathOperatorTag(String pageHeading, String page) {
 
 
 		System.out.println("Testing checkpoint : mathOperatorTag");
-		
+
 		try
 		{
 
@@ -279,10 +266,6 @@ public class StudentViewTesting {
 		{}
 
 	}
-
-
-
-
 
 	private void dataMathMl(String heading, String page) 
 	{
@@ -303,13 +286,7 @@ public class StudentViewTesting {
 		catch(Exception e)
 		{}
 
-
-
 	}
-
-
-
-
 
 	/**1.3.1
 	 * This method is working for all the heading checkpoint like heading hierarchy of heading blank heading, heading role, presence of h1 on the page
@@ -521,7 +498,7 @@ public class StudentViewTesting {
 				allPages=e.getText();
 			}
 
-			
+
 			//System.out.println("Inside of loop "+allPages);
 		}
 		//System.out.println("Outside of loop "+allPages);
@@ -577,12 +554,6 @@ public class StudentViewTesting {
 
 
 
-
-
-
-
-
-
 	private void validationFontSize(String heading, String page) throws Exception {
 
 		System.out.println("Testing checkpoint : validationFontSize");
@@ -592,21 +563,20 @@ public class StudentViewTesting {
 			elist = Selenium.getWebElements(By.xpath("//p | //span"));
 		} catch (Exception e1) {}
 
-		
+
 		for (int i=1;i<elist.size();i++)
 		{
-			
-			
+
+
 			String fontSize =Selenium.getWebElement(By.xpath("(//p | //span)["+i+"]")).getCssValue("font-size");
 			String getAttributeStyle =Selenium.getWebElement(By.xpath("(//p | //span)["+i+"]")).getAttribute("style");
 			String OUTER =Selenium.getWebElement(By.xpath("(//p | //span)["+i+"]")).getAttribute("outerHTML");
-			
-			System.out.println("style"+getAttributeStyle);
-			
+
+
 			if(fontSize.contains("px") ||fontSize.contains("pt") )
 			{
-			System.out.println("Font size "+fontSize);
-			validation_fontSize_list.add(heading+"@#"+page+"@#"+ OUTER+"@#"+fontSize);
+				System.out.println("Font size "+fontSize);
+				//validation_fontSize_list.add(heading+"@#"+page+"@#"+ OUTER+"@#"+fontSize);
 			}
 		}	
 	}
@@ -643,8 +613,8 @@ public class StudentViewTesting {
 				}
 				altDataList.add(chapter+"@#"+page+"@#"+ e.getAttribute("outerHTML")+"@#"+e.getAttribute("alt"));
 			}
-			
-		/*if(e.getAttribute("alt").isEmpty()||e.getAttribute("alt").isEmpty()) 
+
+			/*if(e.getAttribute("alt").isEmpty()||e.getAttribute("alt").isEmpty()) 
 			{
 				if(e.getAttribute("aria-labelledby") == null)
 				{
@@ -694,49 +664,50 @@ public class StudentViewTesting {
 	 */
 	private void getTextOfImages(String src) throws Exception 
 	{
-		URL url = new URL(src);
-		String fileName = url.getFile();
-		String destName = "./images/" + fileName.substring(fileName.lastIndexOf("/"));
+		/*
+			URL url = new URL(src);
+			String fileName = url.getFile();
+			String destName = "./images/" + fileName.substring(fileName.lastIndexOf("/"));
 
-		JavascriptExecutor jse = ((JavascriptExecutor)Selenium.getWebDriver());
-		jse.executeScript("window.open()");
+			JavascriptExecutor jse = ((JavascriptExecutor)Selenium.getWebDriver());
+			jse.executeScript("window.open()");
 
-		Selenium.switchToWindowByNumber(2);
+			Selenium.switchToWindowByNumber(2);
 
-		Selenium.getWebDriver().get(src);
+			Selenium.getWebDriver().get(src);
 
-		File screenshot = ((TakesScreenshot)Selenium.getWebDriver()).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshot, new File(destName));
+			File screenshot = ((TakesScreenshot)Selenium.getWebDriver()).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(screenshot, new File(destName));
 
-		Selenium.getWebDriver().close();
+			Selenium.getWebDriver().close();
 
-		Selenium.switchToWindowByNumber(1);
+			Selenium.switchToWindowByNumber(1);
 
-		Selenium.getWebDriver().switchTo().frame("clo-iframe");
-
-
-		Tesseract tesseract = new Tesseract();
-		try {
-
-			tesseract.setDatapath("D:/Tess4J/tessdata");
-
-			// the path of your tess data folder
-			// inside the extracted file
-			String text
-			= tesseract.doOCR(new File(destName));
-
-			// path of your image file
-			System.out.print("Images of text "+text);
-			Thread.sleep(1000);
-		}
-		catch (TesseractException e) {
-			e.printStackTrace();
-		}
+			Selenium.getWebDriver().switchTo().frame("clo-iframe");
 
 
+			Tesseract tesseract = new Tesseract();
+			try {
+
+				tesseract.setDatapath("D:/Tess4J/tessdata");
+
+				// the path of your tess data folder
+				// inside the extracted file
+				String text
+				= tesseract.doOCR(new File(destName));
+
+				// path of your image file
+				System.out.print("Images of text "+text);
+				Thread.sleep(1000);
+			}
+			catch (TesseractException e) {
+				e.printStackTrace();
+			}
 
 
-		/*	try {
+
+
+			/*	try {
 			 url = new URL(src);
 			 fileName = url.getFile();
 			 destName = "./images/" + fileName.substring(fileName.lastIndexOf("/"));

@@ -1,17 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>MHE_Ebook_Project</groupId>
-  <artifactId>MHE_Ebook_Project</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
- <build>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>MHE_Ebook_Project</groupId>
+	<artifactId>MHE_Ebook_Project</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+	</properties>
+	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
-				<configuration>
-					<release>10</release>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -23,9 +28,11 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.pearson.test.CoupaCreatePOTest</mainClass>
+							<mainClass>com.magic.test.MainTest</mainClass>
 						</manifest>
 					</archive>
+					<fork>true</fork>
+					<executable>C:\Program Files\Java\jdk1.8\bin\javac.exe</executable>
 				</configuration>
 				<executions>
 					<execution>
@@ -103,19 +110,9 @@
 			<version>1.4</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.pdfbox</groupId>
-			<artifactId>pdfbox</artifactId>
-			<version>2.0.7</version>
-		</dependency>
-		<dependency>
 			<groupId>technology.tabula</groupId>
 			<artifactId>tabula</artifactId>
 			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jsoup</groupId>
-			<artifactId>jsoup</artifactId>
-			<version>1.9.1</version>
 		</dependency>
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>

@@ -2,14 +2,12 @@ package com.magic.pages;
 
 import java.io.File;
 
-import net.sourceforge.tess4j.Tesseract;
-import net.sourceforge.tess4j.TesseractException;
   
 public class ImagesOfText {
 	
     public static void main(String[] args)
     {
-        Tesseract tesseract = new Tesseract();
+      /*  Tesseract tesseract = new Tesseract();
         try {
   
             tesseract.setDatapath("D:/Tess4J/tessdata");
@@ -24,8 +22,6 @@ public class ImagesOfText {
         }
         catch (TesseractException e) {
             e.printStackTrace();
-        }
+        }*/
     }
-    
-    
 }

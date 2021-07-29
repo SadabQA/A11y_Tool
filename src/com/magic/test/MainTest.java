@@ -39,7 +39,7 @@ public class MainTest
 
 		String rationale="User would be unable to understand the purpose of the image if the alternate text is missing for the images.";
 		String recommendation="Alternative text should be provided to the image. Use \"alt\" attribute within the IMG tag.";
-		excelWriting.writingDataForFailureInstance("There are non-decorative images or video. (Do NOT select \"partially...\" for components.)", "missingAlt", page.altdetailList,rationale ,recommendation);
+		excelWriting.writingDataForFailureInstance("There are non-decorative images or video. (Do NOT select \"partially...\" for components.)", "missingAlt", page.altdetailList,rationale ,recommendation,"visual");
 	}
 	@Test(priority=3)
 	public void pageBreak() throws IOException
@@ -53,8 +53,8 @@ public class MainTest
 
 		String rationale="Marquee or blink element presence on the page";
 		String recommendation="Remove it from the page";
-		excelWriting.writingDataForFailureInstance("If any video or other moving element does not pass the no flashing standard, we have to report.", "marqueeOrBlankTagPresence", page.blinkTagList,rationale ,recommendation);
-		excelWriting.writingDataForFailureInstance("If any video or other moving element does not pass the no flashing standard, we have to report.", "marqueeOrBlankTagPresence", page.marqueeList,rationale ,recommendation);
+		excelWriting.writingDataForFailureInstance("If any video or other moving element does not pass the no flashing standard, we have to report.", "marqueeOrBlankTagPresence", page.blinkTagList,rationale ,recommendation,"flashing");
+		excelWriting.writingDataForFailureInstance("If any video or other moving element does not pass the no flashing standard, we have to report.", "marqueeOrBlankTagPresence", page.marqueeList,rationale ,recommendation,"flashing");
 
 	}
 	@Test(priority=5)
@@ -63,7 +63,7 @@ public class MainTest
 	
 		String rationale="Track tag not found in video";
 		String recommendation="Add track tag into video or equivalent";
-		excelWriting.writingDataForFailureInstance("There are non-decorative images or video. (Do NOT select \"partially...\" for components.)", "trackTagInsideVideo", page.videoTrack_list,rationale ,recommendation);
+		excelWriting.writingDataForFailureInstance("There are non-decorative images or video. (Do NOT select \"partially...\" for components.)", "trackTagInsideVideo", page.videoTrack_list,rationale ,recommendation,"visual");
 	}
 	
 	@Test(priority=6)
@@ -72,7 +72,7 @@ public class MainTest
 	
 		String rationale="Heading hierarchy validation";
 		String recommendation="use heading is in sequence";
-		excelWriting.writingDataForFailureInstance("Headings marked up properly. All headings, all levels", "headingHierarchy", page.headingHierarchy_list,rationale ,recommendation);
+		excelWriting.writingDataForFailureInstance("Headings marked up properly. All headings, all levels", "headingHierarchy", page.headingHierarchy_list,rationale ,recommendation,"StructuralNavigation");
 	}
 	
 	
@@ -81,21 +81,21 @@ public class MainTest
 	{
 		String rationale="Heading tag is blank";
 		String recommendation="Give text into it or remove it";
-		excelWriting.writingDataForFailureInstance("Headings marked up properly. All headings, all levels", "blankHeading", page.blankHeading_list,rationale ,recommendation);
+		excelWriting.writingDataForFailureInstance("Headings marked up properly. All headings, all levels", "blankHeading", page.blankHeading_list,rationale ,recommendation,"StructuralNavigation");
 	}
 	
 	@Test(priority=8)
 	public void dataMathMl() throws IOException
 	{
 		String message="dataMathml";
-			excelWriting.writingDataForDataExtraction("We generally don’t do this as we rely on MathML", "dataMathMl", page.datamathml_list,message);
+		excelWriting.writingDataForDataExtraction("describedMath","We generally don’t do this as we rely on MathML", "dataMathMl", page.datamathml_list,message);
 	}
 
 	@Test(priority=9)
 	public void altTextPresent() throws IOException
 	{
 		String message="Alt text present need manual validation for accuracy";
-		excelWriting.writingDataForDataExtraction("ALL non-decorative images need to have appropriate alt text. This must be verified", "altTextPresent", page.altDataList,message);
+		excelWriting.writingDataForDataExtraction("alternativeText_data","ALL non-decorative images need to have appropriate alt text. This must be verified", "altTextPresent", page.altDataList,message);
 	}
 
 
@@ -112,28 +112,28 @@ public class MainTest
 	public void altTextLengthGreaterthan155() throws IOException
 	{
 		String message="Alt text length is exceeding from 155 character";
-		excelWriting.writingDataForDataExtraction("ALL non-decorative images need to have appropriate alt text. This must be verified", "altTextLengthGreaterthan155", page.altTextLength_list,message);
+		excelWriting.writingDataForDataExtraction("alternativeText_length","ALL non-decorative images need to have appropriate alt text. This must be verified", "altTextLengthGreaterthan155", page.altTextLength_list,message);
 	}
 
 	@Test(priority=12)
 	public void mathOperatorNotInMoTag() throws IOException
 	{
 		String message="Math operator tag is not in MO tag";
-		excelWriting.writingDataForDataExtraction("When we use it, we can use this tag.", "mathOperatorNotInMoTag", page.mathOperator_list,message);
+		excelWriting.writingDataForDataExtraction("MathML","When we use it, we can use this tag.", "mathOperatorNotInMoTag", page.mathOperator_list,message);
 	}
 	
 	@Test(priority=13)
 	public void longdescriptionText() throws IOException
 	{
 		String message="Long description text";
-		excelWriting.writingDataForDataExtraction("ALL complex images have an extended description. This must be verified, it cannot be just assumed.", "longdescriptionText", page.longdesc_list,message);
+		excelWriting.writingDataForDataExtraction("longDescription","ALL complex images have an extended description. This must be verified, it cannot be just assumed.", "longdescriptionText", page.longdesc_list,message);
 	}
 	
 	@Test(priority=14)
 	public void audioOrVideoExistOnThePage() throws IOException
 	{
 		String message="Video or audio found on the page.";
-		excelWriting.writingDataForDataExtraction("There are audio or video files. (Do NOT select \"partially...\" for components.)", "audioOrVideoExistOnThePage", page.audioAndVideo_list,message);
+		excelWriting.writingDataForDataExtraction("auditory","There are audio or video files. (Do NOT select \"partially...\" for components.)", "audioOrVideoExistOnThePage", page.audioAndVideo_list,message);
 	}
 	@Test(priority=15)
 	public void fontSizeDefinedInPxOrPt() throws IOException

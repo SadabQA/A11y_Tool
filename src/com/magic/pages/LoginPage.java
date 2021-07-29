@@ -27,7 +27,7 @@ public class LoginPage {
 		Selenium.click(By.xpath("//h4//span[text()='Brewer, Introduction to Managerial Accounting']/../../../following-sibling::div//a"));
 		
 		
-		//sysout
+		
 		
 	}
 }

@@ -5,7 +5,7 @@
     <classes>
       <class name="com.magic.test.MainTest">
         <methods>
-          <include name="pageBreak"/>
+          <include name="navigationAndImplementation"/>
         </methods>
       </class> <!-- com.magic.test.MainTest -->
     </classes>

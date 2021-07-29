@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\hp\AppData\Local\Temp\testng-eclipse-1779015052\testng-customsuite.xml</span>
+                    <span>C:\Users\hp\AppData\Local\Temp\testng-eclipse--195135563\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods,   15 passed</span>
+                    <span class="method-stats">15 methods, 1 failed,   14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="navigationAndImplementation">navigationAndImplementation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -162,11 +176,6 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="navigationAndImplementation">navigationAndImplementation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="pageBreak">pageBreak</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -187,6 +196,68 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.magic.test.MainTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigationAndImplementation">
+                  </a> <!-- navigationAndImplementation -->
+                  <span class="method-name">navigationAndImplementation</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: next-button (tried for 15 second(s) with 1000 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:315)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+	at com.pearson.utils.Selenium.getWebElement(Selenium.java:80)
+	at com.pearson.utils.Selenium.click(Selenium.java:456)
+	at com.magic.pages.StudentViewTesting.test(StudentViewTesting.java:154)
+	at com.magic.test.MainTest.navigationAndImplementation(MainTest.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: next-button
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;SADAB&apos;, ip: &apos;192.168.43.251&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	... 29 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -279,13 +350,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="navigationAndImplementation">
-                  </a> <!-- navigationAndImplementation -->
-                  <span class="method-name">navigationAndImplementation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="pageBreak">
                   </a> <!-- pageBreak -->
                   <span class="method-name">pageBreak</span>
@@ -303,7 +367,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\hp\AppData\Local\Temp\testng-eclipse-1779015052\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\hp\AppData\Local\Temp\testng-eclipse--195135563\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -354,70 +418,70 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(15);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'fontSizeDefinedInPxOrPt')
+data.setCell(0, 1, 'navigationAndImplementation')
 data.setCell(0, 2, 'com.magic.test.MainTest')
-data.setCell(0, 3, 1419069);
+data.setCell(0, 3, 1005013);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'navigationAndImplementation')
+data.setCell(1, 1, 'missingAlt')
 data.setCell(1, 2, 'com.magic.test.MainTest')
-data.setCell(1, 3, 409084);
+data.setCell(1, 3, 23759);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'missingAlt')
+data.setCell(2, 1, 'pageBreak')
 data.setCell(2, 2, 'com.magic.test.MainTest')
-data.setCell(2, 3, 10406);
+data.setCell(2, 3, 11123);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'pageBreak')
+data.setCell(3, 1, 'headingHierarchy')
 data.setCell(3, 2, 'com.magic.test.MainTest')
-data.setCell(3, 3, 3794);
+data.setCell(3, 3, 8285);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'headingHierarchy')
+data.setCell(4, 1, 'altTextPresent')
 data.setCell(4, 2, 'com.magic.test.MainTest')
-data.setCell(4, 3, 2399);
+data.setCell(4, 3, 4397);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'altTextPresent')
+data.setCell(5, 1, 'longdescriptionText')
 data.setCell(5, 2, 'com.magic.test.MainTest')
-data.setCell(5, 3, 1400);
+data.setCell(5, 3, 1190);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'blankHeading')
 data.setCell(6, 2, 'com.magic.test.MainTest')
-data.setCell(6, 3, 440);
+data.setCell(6, 3, 587);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'longdescriptionText')
+data.setCell(7, 1, 'dataMathMl')
 data.setCell(7, 2, 'com.magic.test.MainTest')
-data.setCell(7, 3, 344);
+data.setCell(7, 3, 493);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'marqueeOrBlankTagPresence')
 data.setCell(8, 2, 'com.magic.test.MainTest')
-data.setCell(8, 3, 88);
+data.setCell(8, 3, 105);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'dataMathMl')
+data.setCell(9, 1, 'audioOrVideoExistOnThePage')
 data.setCell(9, 2, 'com.magic.test.MainTest')
-data.setCell(9, 3, 48);
+data.setCell(9, 3, 61);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'audioOrVideoExistOnThePage')
+data.setCell(10, 1, 'altTextLengthGreaterthan155')
 data.setCell(10, 2, 'com.magic.test.MainTest')
-data.setCell(10, 3, 40);
+data.setCell(10, 3, 59);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'trackTagInsideVideo')
+data.setCell(11, 1, 'mathOperatorNotInMoTag')
 data.setCell(11, 2, 'com.magic.test.MainTest')
-data.setCell(11, 3, 32);
+data.setCell(11, 3, 55);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'altTextLengthGreaterthan155')
+data.setCell(12, 1, 'fontSizeDefinedInPxOrPt')
 data.setCell(12, 2, 'com.magic.test.MainTest')
-data.setCell(12, 3, 32);
+data.setCell(12, 3, 48);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'mathOperatorNotInMoTag')
+data.setCell(13, 1, 'trackTagInsideVideo')
 data.setCell(13, 2, 'com.magic.test.MainTest')
-data.setCell(13, 3, 24);
+data.setCell(13, 3, 41);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'missingAltAndArialabelledby')
 data.setCell(14, 2, 'com.magic.test.MainTest')
-data.setCell(14, 3, 0);
+data.setCell(14, 3, 1);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 minutes</span>
+              <span class="suite-total-time">Total running time: 17 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -445,64 +509,66 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.magic.test.MainTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">navigationAndImplementation</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">missingAlt</span>
-                <span class="method-start">409100 ms</span>
+                <span class="method-start">1005036 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">pageBreak</span>
-                <span class="method-start">419514 ms</span>
+                <span class="method-start">1028801 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">marqueeOrBlankTagPresence</span>
-                <span class="method-start">423308 ms</span>
+                <span class="method-start">1039926 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">trackTagInsideVideo</span>
-                <span class="method-start">423396 ms</span>
+                <span class="method-start">1040033 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">headingHierarchy</span>
-                <span class="method-start">423428 ms</span>
+                <span class="method-start">1040078 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">blankHeading</span>
-                <span class="method-start">425827 ms</span>
+                <span class="method-start">1048364 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">dataMathMl</span>
-                <span class="method-start">426275 ms</span>
+                <span class="method-start">1048953 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">altTextPresent</span>
-                <span class="method-start">426331 ms</span>
+                <span class="method-start">1049448 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">missingAltAndArialabelledby</span>
-                <span class="method-start">427731 ms</span>
+                <span class="method-start">1053848 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">altTextLengthGreaterthan155</span>
-                <span class="method-start">427739 ms</span>
+                <span class="method-start">1053851 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">mathOperatorNotInMoTag</span>
-                <span class="method-start">427771 ms</span>
+                <span class="method-start">1053912 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">longdescriptionText</span>
-                <span class="method-start">427803 ms</span>
+                <span class="method-start">1053968 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">audioOrVideoExistOnThePage</span>
-                <span class="method-start">428155 ms</span>
+                <span class="method-start">1055159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">fontSizeDefinedInPxOrPt</span>
-                <span class="method-start">428195 ms</span>
+                <span class="method-start">1055221 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -10,26 +10,26 @@ import com.pearson.utils.ExcelUtil;
 public class WriteDataInExcel 
 {
 
-	public boolean writingDataForFailureInstance(String criteria,String checkpoint,List<String> list,String rationale,String recommendation) throws IOException 
+	public boolean writingDataForFailureInstance(String criteria,String checkpoint,List<String> list,String rationale,String recommendation,String sheetName) throws IOException 
 	{
 		String filename="./result/MHE_Results";
-		int rownum = ExcelUtil.getRowCount(filename, "Bug")+1;
+		int rownum = ExcelUtil.getRowCount(filename, sheetName)+1;
 		boolean test_status=true;
 
 		for (String string : list) {
 
 			String[] page_code=string.split("@#");
-			ExcelUtil.writeDataExistingSheet(filename, "Bug", rownum, 0, criteria);
-			ExcelUtil.writeDataExistingSheet(filename, "Bug", rownum, 1, checkpoint);
-			ExcelUtil.writeDataExistingSheet(filename, "Bug", rownum, 2, page_code[0]);
-			ExcelUtil.writeDataExistingSheet(filename, "Bug", rownum, 3, page_code[1]);
-			ExcelUtil.writeDataExistingSheet(filename, "Bug", rownum, 4, page_code[2]);
+			ExcelUtil.writeDataExistingSheet(filename, sheetName, rownum, 0, criteria);
+			ExcelUtil.writeDataExistingSheet(filename, sheetName, rownum, 1, checkpoint);
+			ExcelUtil.writeDataExistingSheet(filename, sheetName, rownum, 2, page_code[0]);
+			ExcelUtil.writeDataExistingSheet(filename, sheetName, rownum, 3, page_code[1]);
+			ExcelUtil.writeDataExistingSheet(filename, sheetName, rownum, 4, page_code[2]);
 			if(page_code[2].length()>32000)
 			{
 				page_code[2]=page_code[2].substring(0, 32000);
 			}
-			ExcelUtil.writeDataExistingSheet(filename, "Bug", rownum, 5, rationale);
-			ExcelUtil.writeDataExistingSheet(filename, "Bug", rownum, 6, recommendation);
+			ExcelUtil.writeDataExistingSheet(filename, sheetName, rownum, 5, rationale);
+			ExcelUtil.writeDataExistingSheet(filename, sheetName, rownum, 6, recommendation);
 
 			rownum++;
 		}
@@ -41,32 +41,32 @@ public class WriteDataInExcel
 		return test_status;
 	}
 
-	public void writingDataForDataExtraction(String criteria,String checkpoint,List<String> list,String message) throws IOException 
+	public void writingDataForDataExtraction(String sheetname,String criteria,String checkpoint,List<String> list,String message) throws IOException 
 	{
 		String filename="./result/MHE_Results";
-		int rownum = ExcelUtil.getRowCount(filename, "Extracted Data")+1;
+		int rownum = ExcelUtil.getRowCount(filename, sheetname)+1;
 		boolean test_status=true;
 
 		for (String string : list) 
 		{
 			String[] page_code=string.split("@#");
-			ExcelUtil.writeDataExistingSheet(filename, "Extracted Data", rownum, 0, criteria);
-			ExcelUtil.writeDataExistingSheet(filename, "Extracted Data", rownum, 1, checkpoint);
-			ExcelUtil.writeDataExistingSheet(filename, "Extracted Data", rownum, 2, page_code[0]);
-			ExcelUtil.writeDataExistingSheet(filename, "Extracted Data", rownum, 3, page_code[1]);
+			ExcelUtil.writeDataExistingSheet(filename, sheetname, rownum, 0, criteria);
+			ExcelUtil.writeDataExistingSheet(filename, sheetname, rownum, 1, checkpoint);
+			ExcelUtil.writeDataExistingSheet(filename, sheetname, rownum, 2, page_code[0]);
+			ExcelUtil.writeDataExistingSheet(filename, sheetname, rownum, 3, page_code[1]);
 			if(page_code[2].length()>32000)
 			{
 				page_code[2]=page_code[2].substring(0, 32000);
 			}
-			ExcelUtil.writeDataExistingSheet(filename, "Extracted Data", rownum, 4, page_code[2]);
+			ExcelUtil.writeDataExistingSheet(filename, sheetname, rownum, 4, page_code[2]);
 
 			if(page_code.length>3)
 			{
-				ExcelUtil.writeDataExistingSheet(filename, "Extracted Data", rownum, 5, page_code[3]);
+				ExcelUtil.writeDataExistingSheet(filename, sheetname, rownum, 5, page_code[3]);
 
 			}
 			
-			ExcelUtil.writeDataExistingSheet(filename, "Extracted Data", rownum, 6, message);
+			ExcelUtil.writeDataExistingSheet(filename,sheetname, rownum, 6, message);
 			rownum++;
 		}
 	}
@@ -112,13 +112,13 @@ public class WriteDataInExcel
 		{	
 			String[] page_code=string.split("@#");
 			
-			ExcelUtil.writeDataExistingSheet(filename, "Page break", rownum, 0, Criteria);
-			ExcelUtil.writeDataExistingSheet(filename, "Page break", rownum, 1, checkpoint);
-			ExcelUtil.writeDataExistingSheet(filename, "Page break", rownum, 2, page_code[0]);
+			ExcelUtil.writeDataExistingSheet(filename, "printPageNumbers", rownum, 0, Criteria);
+			ExcelUtil.writeDataExistingSheet(filename, "printPageNumbers", rownum, 1, checkpoint);
+			ExcelUtil.writeDataExistingSheet(filename, "printPageNumbers", rownum, 2, page_code[0]);
 			
 			for (int i = 1; i < page_code.length; i++) 
 			{
-				ExcelUtil.writeDataExistingSheet(filename, "Page break", rownum, (2+i), page_code[i]);
+				ExcelUtil.writeDataExistingSheet(filename, "printPageNumbers", rownum, (2+i), page_code[i]);
 			}
 			
 			rownum++;
