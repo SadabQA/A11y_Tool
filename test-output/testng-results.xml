@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1847297" started-at="2021-07-27T08:36:33Z" finished-at="2021-07-27T09:07:20Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1847297" started-at="2021-07-27T08:36:33Z" finished-at="2021-07-27T09:07:20Z">
+      <class name="com.magic.test.MainTest">
+        <test-method status="PASS" signature="navigationAndImplementation()[pri:1, instance:com.magic.test.MainTest@6eceb130]" name="navigationAndImplementation" duration-ms="409084" started-at="2021-07-27T08:36:33Z" finished-at="2021-07-27T08:43:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigationAndImplementation -->
+        <test-method status="PASS" signature="missingAlt()[pri:2, instance:com.magic.test.MainTest@6eceb130]" name="missingAlt" duration-ms="10406" started-at="2021-07-27T08:43:22Z" finished-at="2021-07-27T08:43:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingAlt -->
+        <test-method status="PASS" signature="pageBreak()[pri:3, instance:com.magic.test.MainTest@6eceb130]" name="pageBreak" duration-ms="3794" started-at="2021-07-27T08:43:32Z" finished-at="2021-07-27T08:43:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageBreak -->
+        <test-method status="PASS" signature="marqueeOrBlankTagPresence()[pri:4, instance:com.magic.test.MainTest@6eceb130]" name="marqueeOrBlankTagPresence" duration-ms="88" started-at="2021-07-27T08:43:36Z" finished-at="2021-07-27T08:43:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- marqueeOrBlankTagPresence -->
+        <test-method status="PASS" signature="trackTagInsideVideo()[pri:5, instance:com.magic.test.MainTest@6eceb130]" name="trackTagInsideVideo" duration-ms="32" started-at="2021-07-27T08:43:36Z" finished-at="2021-07-27T08:43:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trackTagInsideVideo -->
+        <test-method status="PASS" signature="headingHierarchy()[pri:6, instance:com.magic.test.MainTest@6eceb130]" name="headingHierarchy" duration-ms="2399" started-at="2021-07-27T08:43:36Z" finished-at="2021-07-27T08:43:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- headingHierarchy -->
+        <test-method status="PASS" signature="blankHeading()[pri:7, instance:com.magic.test.MainTest@6eceb130]" name="blankHeading" duration-ms="440" started-at="2021-07-27T08:43:39Z" finished-at="2021-07-27T08:43:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankHeading -->
+        <test-method status="PASS" signature="dataMathMl()[pri:8, instance:com.magic.test.MainTest@6eceb130]" name="dataMathMl" duration-ms="48" started-at="2021-07-27T08:43:39Z" finished-at="2021-07-27T08:43:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataMathMl -->
+        <test-method status="PASS" signature="altTextPresent()[pri:9, instance:com.magic.test.MainTest@6eceb130]" name="altTextPresent" duration-ms="1400" started-at="2021-07-27T08:43:39Z" finished-at="2021-07-27T08:43:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- altTextPresent -->
+        <test-method status="PASS" signature="missingAltAndArialabelledby()[pri:10, instance:com.magic.test.MainTest@6eceb130]" name="missingAltAndArialabelledby" duration-ms="0" started-at="2021-07-27T08:43:40Z" finished-at="2021-07-27T08:43:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingAltAndArialabelledby -->
+        <test-method status="PASS" signature="altTextLengthGreaterthan155()[pri:11, instance:com.magic.test.MainTest@6eceb130]" name="altTextLengthGreaterthan155" duration-ms="32" started-at="2021-07-27T08:43:40Z" finished-at="2021-07-27T08:43:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- altTextLengthGreaterthan155 -->
+        <test-method status="PASS" signature="mathOperatorNotInMoTag()[pri:12, instance:com.magic.test.MainTest@6eceb130]" name="mathOperatorNotInMoTag" duration-ms="24" started-at="2021-07-27T08:43:40Z" finished-at="2021-07-27T08:43:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mathOperatorNotInMoTag -->
+        <test-method status="PASS" signature="longdescriptionText()[pri:13, instance:com.magic.test.MainTest@6eceb130]" name="longdescriptionText" duration-ms="344" started-at="2021-07-27T08:43:41Z" finished-at="2021-07-27T08:43:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- longdescriptionText -->
+        <test-method status="PASS" signature="audioOrVideoExistOnThePage()[pri:14, instance:com.magic.test.MainTest@6eceb130]" name="audioOrVideoExistOnThePage" duration-ms="40" started-at="2021-07-27T08:43:41Z" finished-at="2021-07-27T08:43:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- audioOrVideoExistOnThePage -->
+        <test-method status="PASS" signature="fontSizeDefinedInPxOrPt()[pri:15, instance:com.magic.test.MainTest@6eceb130]" name="fontSizeDefinedInPxOrPt" duration-ms="1419069" started-at="2021-07-27T08:43:41Z" finished-at="2021-07-27T09:07:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fontSizeDefinedInPxOrPt -->
+      </class> <!-- com.magic.test.MainTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

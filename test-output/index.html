@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
+              <span class="suite-name border-passed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+                    <span>C:\Users\hp\AppData\Local\Temp\testng-eclipse-1779015052\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">15 methods,   15 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="altTextLengthGreaterthan155">altTextLengthGreaterthan155</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="altTextPresent">altTextPresent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="audioOrVideoExistOnThePage">audioOrVideoExistOnThePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="blankHeading">blankHeading</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="dataMathMl">dataMathMl</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="fontSizeDefinedInPxOrPt">fontSizeDefinedInPxOrPt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="headingHierarchy">headingHierarchy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="longdescriptionText">longdescriptionText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="marqueeOrBlankTagPresence">marqueeOrBlankTagPresence</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="mathOperatorNotInMoTag">mathOperatorNotInMoTag</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="missingAlt">missingAlt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="missingAltAndArialabelledby">missingAltAndArialabelledby</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="navigationAndImplementation">navigationAndImplementation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="pageBreak">pageBreak</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.magic.test.MainTest" hash-for-method="trackTagInsideVideo">trackTagInsideVideo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.magic.test.MainTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="altTextLengthGreaterthan155">
+                  </a> <!-- altTextLengthGreaterthan155 -->
+                  <span class="method-name">altTextLengthGreaterthan155</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="altTextPresent">
+                  </a> <!-- altTextPresent -->
+                  <span class="method-name">altTextPresent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="audioOrVideoExistOnThePage">
+                  </a> <!-- audioOrVideoExistOnThePage -->
+                  <span class="method-name">audioOrVideoExistOnThePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="blankHeading">
+                  </a> <!-- blankHeading -->
+                  <span class="method-name">blankHeading</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="dataMathMl">
+                  </a> <!-- dataMathMl -->
+                  <span class="method-name">dataMathMl</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fontSizeDefinedInPxOrPt">
+                  </a> <!-- fontSizeDefinedInPxOrPt -->
+                  <span class="method-name">fontSizeDefinedInPxOrPt</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="headingHierarchy">
+                  </a> <!-- headingHierarchy -->
+                  <span class="method-name">headingHierarchy</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="longdescriptionText">
+                  </a> <!-- longdescriptionText -->
+                  <span class="method-name">longdescriptionText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="marqueeOrBlankTagPresence">
+                  </a> <!-- marqueeOrBlankTagPresence -->
+                  <span class="method-name">marqueeOrBlankTagPresence</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="mathOperatorNotInMoTag">
+                  </a> <!-- mathOperatorNotInMoTag -->
+                  <span class="method-name">mathOperatorNotInMoTag</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="missingAlt">
+                  </a> <!-- missingAlt -->
+                  <span class="method-name">missingAlt</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="missingAltAndArialabelledby">
+                  </a> <!-- missingAltAndArialabelledby -->
+                  <span class="method-name">missingAltAndArialabelledby</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigationAndImplementation">
+                  </a> <!-- navigationAndImplementation -->
+                  <span class="method-name">navigationAndImplementation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pageBreak">
+                  </a> <!-- pageBreak -->
+                  <span class="method-name">pageBreak</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="trackTagInsideVideo">
+                  </a> <!-- trackTagInsideVideo -->
+                  <span class="method-name">trackTagInsideVideo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\hp\AppData\Local\Temp\testng-eclipse-1779015052\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.magic.test.MainTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(15);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'fontSizeDefinedInPxOrPt')
+data.setCell(0, 2, 'com.magic.test.MainTest')
+data.setCell(0, 3, 1419069);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'navigationAndImplementation')
+data.setCell(1, 2, 'com.magic.test.MainTest')
+data.setCell(1, 3, 409084);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'missingAlt')
+data.setCell(2, 2, 'com.magic.test.MainTest')
+data.setCell(2, 3, 10406);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'pageBreak')
+data.setCell(3, 2, 'com.magic.test.MainTest')
+data.setCell(3, 3, 3794);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'headingHierarchy')
+data.setCell(4, 2, 'com.magic.test.MainTest')
+data.setCell(4, 3, 2399);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'altTextPresent')
+data.setCell(5, 2, 'com.magic.test.MainTest')
+data.setCell(5, 3, 1400);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'blankHeading')
+data.setCell(6, 2, 'com.magic.test.MainTest')
+data.setCell(6, 3, 440);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'longdescriptionText')
+data.setCell(7, 2, 'com.magic.test.MainTest')
+data.setCell(7, 3, 344);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'marqueeOrBlankTagPresence')
+data.setCell(8, 2, 'com.magic.test.MainTest')
+data.setCell(8, 3, 88);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'dataMathMl')
+data.setCell(9, 2, 'com.magic.test.MainTest')
+data.setCell(9, 3, 48);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'audioOrVideoExistOnThePage')
+data.setCell(10, 2, 'com.magic.test.MainTest')
+data.setCell(10, 3, 40);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'trackTagInsideVideo')
+data.setCell(11, 2, 'com.magic.test.MainTest')
+data.setCell(11, 3, 32);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'altTextLengthGreaterthan155')
+data.setCell(12, 2, 'com.magic.test.MainTest')
+data.setCell(12, 3, 32);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'mathOperatorNotInMoTag')
+data.setCell(13, 2, 'com.magic.test.MainTest')
+data.setCell(13, 3, 24);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'missingAltAndArialabelledby')
+data.setCell(14, 2, 'com.magic.test.MainTest')
+data.setCell(14, 3, 0);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 30 minutes</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.magic.test.MainTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">navigationAndImplementation</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">missingAlt</span>
+                <span class="method-start">409100 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pageBreak</span>
+                <span class="method-start">419514 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">marqueeOrBlankTagPresence</span>
+                <span class="method-start">423308 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">trackTagInsideVideo</span>
+                <span class="method-start">423396 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">headingHierarchy</span>
+                <span class="method-start">423428 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">blankHeading</span>
+                <span class="method-start">425827 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">dataMathMl</span>
+                <span class="method-start">426275 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">altTextPresent</span>
+                <span class="method-start">426331 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">missingAltAndArialabelledby</span>
+                <span class="method-start">427731 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">altTextLengthGreaterthan155</span>
+                <span class="method-start">427739 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">mathOperatorNotInMoTag</span>
+                <span class="method-start">427771 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">longdescriptionText</span>
+                <span class="method-start">427803 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">audioOrVideoExistOnThePage</span>
+                <span class="method-start">428155 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fontSizeDefinedInPxOrPt</span>
+                <span class="method-start">428195 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
